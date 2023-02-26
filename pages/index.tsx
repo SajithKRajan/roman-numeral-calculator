@@ -1,11 +1,17 @@
 import styles from "@/pages/index.module.css";
+//The ui library (Prime React) related style imports.
+import "primereact/resources/themes/lara-dark-indigo/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+import "primeflex/primeflex.css";
 import Head from "next/head";
+import { ConverterComponent } from "@/components/Converter";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Roman Numeral Calculator`</title>
+        <title>Roman Numeral Calculator</title>
         <meta
           name="description"
           content="App for convert number into roman numeral."
@@ -14,8 +20,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.container}>
-        
+      <main>
+        <div className={styles.container}>
+          <ConverterComponent />
+        </div>
       </main>
     </>
   );

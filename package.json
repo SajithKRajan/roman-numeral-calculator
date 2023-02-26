@@ -8,7 +8,12 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
+    "install": "^0.13.0",
     "next": "latest",
+    "npm": "^9.5.1",
+    "primeflex": "^3.3.0",
+    "primeicons": "^6.0.1",
+    "primereact": "^9.2.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
