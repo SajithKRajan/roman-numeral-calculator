@@ -1,6 +1,6 @@
 import styles from "@/pages/index.module.css";
 //The ui library (Prime React) related style imports.
-import "primereact/resources/themes/lara-dark-indigo/theme.css";
+import "primereact/resources/themes/bootstrap4-dark-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
