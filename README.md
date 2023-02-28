@@ -27,3 +27,16 @@ pnpm create next-app --example with-jest with-jest-app
 ```bash
 npm test
 ```
+
+## Run Development
+
+```bash
+npm run dev
+```
+
+## Run Production
+
+```bash
+npm run build
+npm run start
+```
