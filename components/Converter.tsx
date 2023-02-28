@@ -5,6 +5,7 @@ import {
 } from "primereact/inputnumber";
 import { useState } from "react";
 import { InputText } from "primereact/inputtext";
+import { calculateRomanNumeric } from "../services/convertion.service";
 
 export const ConverterComponent = () => {
   const [inputNumber, setInputNumber] = useState<number>(1);
@@ -14,9 +15,14 @@ export const ConverterComponent = () => {
    * The method for handling input change and tigger convertion.
    * @param event
    */
-  const onInputChange = (event: InputNumberValueChangeEvent) => {
-    if (event.value) {
-      setInputNumber(event.value);
+  const onInputChange = async (event: InputNumberValueChangeEvent) => {
+    const value = event.value;
+    if (value) {
+      setInputNumber(value);
+      const result = calculateRomanNumeric(value);
+      setRomanNumeral(result);
+    } else {
+      setRomanNumeral("");
     }
   };
 
@@ -35,6 +41,9 @@ export const ConverterComponent = () => {
             min={1}
             max={1000}
           />
+          <small id="username-help">
+            {"Press Enter \u2386 key to evaluate"}
+          </small>
         </div>
         <div className="flex-auto">
           <label htmlFor="output" className="font-lignt block mb-2">

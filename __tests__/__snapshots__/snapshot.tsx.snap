@@ -61,6 +61,11 @@ exports[`renders homepage unchanged 1`] = `
                     value="1"
                   />
                 </span>
+                <small
+                  id="username-help"
+                >
+                  Press Enter ⎆ key to evaluate
+                </small>
               </div>
               <div
                 class="flex-auto"
