@@ -43,3 +43,12 @@ Launches the test runner in the interactive watch mode.
 npm test -- --coverage
 ```
 Launches the test runner in the interactive watch mode and shows coverage.
+
+Launches the test runner in the interactive watch mode.
+
+## Run Jest Coverage
+
+```bash
+npm test -- --coverage
+```
+Launches the test runner in the interactive watch mode and shows coverage.
