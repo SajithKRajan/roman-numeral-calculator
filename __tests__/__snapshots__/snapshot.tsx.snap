@@ -80,6 +80,7 @@ exports[`renders homepage unchanged 1`] = `
                   class="p-inputtext p-component p-disabled p-filled w-full"
                   disabled=""
                   id="output"
+                  role="textbox"
                   value="I"
                 />
               </div>

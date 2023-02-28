@@ -50,6 +50,7 @@ export const ConverterComponent = () => {
             Roman Numeral
           </label>
           <InputText
+            role={"textbox"}
             className="w-full"
             id="output"
             value={romanNumeral}

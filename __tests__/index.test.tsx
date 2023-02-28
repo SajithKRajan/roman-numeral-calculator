@@ -12,36 +12,30 @@ describe("Home", () => {
 
   it("should renders 2 text boxed and output text box is disabled", () => {
     setup();
-    const inputTextBox = screen.getByLabelText("Input Number").closest("input");
+    const inputTextBox = screen.getByRole("spinbutton");
     expect(inputTextBox).toBeInTheDocument();
     expect(inputTextBox?.getAttribute("disabled")).toBeNull();
-    const outputTextBox = screen
-      .getByLabelText("Roman Numeral")
-      .closest("input");
+    const outputTextBox = screen.getByRole("textbox");
     expect(outputTextBox).toBeInTheDocument();
     expect(outputTextBox?.getAttribute("disabled")).toBe("");
   });
 
   it("Should be the type of first input box is numeric and ourput type with text", () => {
     setup();
-    const inputTextBox = screen.getByLabelText("Input Number").closest("input");
+    const inputTextBox = screen.getByRole("spinbutton");
     expect(inputTextBox).toBeInTheDocument();
     expect(inputTextBox?.getAttribute("inputmode")).toBe("numeric");
-    const outputTextBox = screen
-      .getByLabelText("Roman Numeral")
-      .closest("input");
+    const outputTextBox = screen.getByRole("textbox");
     expect(outputTextBox).toBeInTheDocument();
     expect(outputTextBox?.getAttribute("inputmode")).toBeNull();
   });
 
   it("should render the input and output with default value", () => {
     setup();
-    const inputTextBox = screen.getByLabelText("Input Number").closest("input");
+    const inputTextBox = screen.getByRole("spinbutton");
     expect(inputTextBox).toBeInTheDocument();
     expect(inputTextBox?.getAttribute("value")).toBe("1");
-    const outputTextBox = screen
-      .getByLabelText("Roman Numeral")
-      .closest("input");
+    const outputTextBox = screen.getByRole("textbox");
     expect(outputTextBox).toBeInTheDocument();
     expect(outputTextBox?.getAttribute("value")).toBe("I");
   });
@@ -66,9 +60,7 @@ describe("Home", () => {
   it("Should work convertion for blank input", () => {
     setup();
     const inputTextBox = screen.getByRole("spinbutton");
-    const outputTextBox = screen
-      .getByLabelText("Roman Numeral")
-      .closest("input");
+    const outputTextBox = screen.getByRole("textbox");
     fireEvent.change(inputTextBox, {
       target: { value: "" },
     });
@@ -79,9 +71,7 @@ describe("Home", () => {
   it("Should calculate roman numeric from input", () => {
     setup();
     const inputTextBox = screen.getByRole("spinbutton");
-    const outputTextBox = screen
-      .getByLabelText("Roman Numeral")
-      .closest("input");
+    const outputTextBox = screen.getByRole("textbox");
     fireEvent.change(inputTextBox, {
       target: { value: "5" },
     });
@@ -97,9 +87,7 @@ describe("Home", () => {
   it("Should not allow the input values outside range 1-1000", () => {
     setup();
     const inputTextBox = screen.getByRole("spinbutton");
-    const outputTextBox = screen
-      .getByLabelText("Roman Numeral")
-      .closest("input");
+    const outputTextBox = screen.getByRole("textbox");
     fireEvent.change(inputTextBox, {
       target: { value: "0" },
     });
@@ -117,9 +105,7 @@ describe("Home", () => {
   it("Should allow the boundary values", () => {
     setup();
     const inputTextBox = screen.getByRole("spinbutton");
-    const outputTextBox = screen
-      .getByLabelText("Roman Numeral")
-      .closest("input");
+    const outputTextBox = screen.getByRole("textbox");
     fireEvent.change(inputTextBox, {
       target: { value: "1" },
     });
