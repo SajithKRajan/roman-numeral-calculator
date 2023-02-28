@@ -1,29 +1,54 @@
-# Next.js + Jest
+# Roman Numeric Calculator
 
-This example shows how to configure Jest to work with Next.js.
-
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
-
-## How to Use
+## Getting Started with Create Next App
 
 Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
 
-In your terminal, run the following command:
+## Run Application as Development
 
 ```bash
-npx create-next-app --example with-jest with-jest-app
+npm run dev
 ```
 
-```bash
-yarn create next-app --example with-jest with-jest-app
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+## Run Application as Production
 
 ```bash
-pnpm create next-app --example with-jest with-jest-app
+npm run build
+npm run start
 ```
+
+Builds the app for production to the `.next` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
 ## Run Jest Tests
 
 ```bash
 npm test
 ```
+
+Launches the test runner in the interactive watch mode.
+
+## Run Jest Coverage
+
+```bash
+npm test -- --coverage
+```
+Launches the test runner in the interactive watch mode and shows coverage.
+
+Launches the test runner in the interactive watch mode.
+
+## Run Jest Coverage
+
+```bash
+npm test -- --coverage
+```
+Launches the test runner in the interactive watch mode and shows coverage.
